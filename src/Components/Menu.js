@@ -19,12 +19,12 @@ function Menu({ title, menuObject }) {
 
       <ul>
         {menuObject &&
-          menuObject.map((li) => (
-            <li key={li.id}>
+          menuObject.map((menu) => (
+            <li key={menu.id}>
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a href="#">
-                <i>{li.icon}</i>
-                <span> {li.name}</span>
+                <i>{menu.icon}</i>
+                <span> {menu.name}</span>
               </a>
             </li>
           ))}
