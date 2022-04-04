@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import { FaUsers } from "react-icons/fa";
 import "../Styles/MainContainer.css";
+import { AudioList } from "./AudioList";
 import { Banner } from "./Banner";
 
 function MainContainer() {
@@ -45,6 +46,7 @@ function MainContainer() {
           12.3M <span>Followers</span>
         </p>
       </div>
+      <AudioList />
     </div>
   );
 }
