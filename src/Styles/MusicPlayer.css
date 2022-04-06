@@ -90,6 +90,7 @@
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
   cursor: pointer;
+  overflow: hidden;
 }
 
 /* Chrome & Safari */
@@ -99,7 +100,7 @@
   top: 0;
   left: 0;
   background: #848484;
-  width: 50%;
+  width: var(--player-played);
   height: 100%;
   border-radius: 10px;
   z-index: 2;
@@ -129,7 +130,7 @@
 
 .songAttributes .bottom .progresBar::-moz-range-progress {
   background: #848484;
-  width: 50%;
+  width: var(--player-played);
   height: 100%;
   border-radius: 10px;
   z-index: 2;
@@ -150,4 +151,23 @@
   color: #f1f1f1;
   font-size: 12px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 550px) {
+  .songImage {
+    width: 100px;
+    min-width: 100px;
+  }
+
+  .songAttributes .top .left i,
+  .songAttributes .top .middle i,
+  .songAttributes .top .right i {
+    margin: 0px 5px;
+  }
+  .songAttributes .bottom {
+    padding: unset;
+  }
+  .songAttributes .bottom .progresBar {
+    width: 65%;
+  }
 }
